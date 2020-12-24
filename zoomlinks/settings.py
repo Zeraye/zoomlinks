@@ -21,12 +21,13 @@ TEMPLATE_DIR = Path.joinpath(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(p&zu@u*o0v+jwkar8crjf*fm^@u53x_0_ky(h8x&$fns#(6c='
+# SECRET_KEY = '(p&zu@u*o0v+jwkar8crjf*fm^@u53x_0_ky(h8x&$fns#(6c='
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zoom-links.herokuapp.com', 'zoomlinks.pl']
 
 
 # Application definition
