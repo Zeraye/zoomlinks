@@ -1,0 +1,22 @@
+body, html {
+    background-color: #13232f!important;
+    color: white!important;
+    font-size: 2rem!important;
+    height: 100%;
+}
+
+div.box {
+    background-color: #1ab188;
+    border-bottom: 5px solid #13232f;
+    text-align: center;
+    height: 12.5%;
+}
+
+div.box:hover {
+    background-color: #179f7a;
+}
+
+a {
+    text-decoration: none!important;
+    color: white!important;
+}
