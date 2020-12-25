@@ -4,7 +4,7 @@
 {% block title %}Klasa 3a{% endblock %}
 
 {% block body %}
-<a><div class="box_live d-flex flex-column justify-content-center">Teraz: {{ curr_lesson }}</div></a>
+    <a><div class="box_live d-flex flex-column justify-content-center">Teraz: {{ curr_lesson }}</div></a>
     <a href="{% url 'slo3a:math' %}"><div class="box d-flex flex-column justify-content-center">Matematyka</div></a>
     <a href="{% url 'slo3a:physics' %}"><div class="box d-flex flex-column justify-content-center">Fizyka</div></a>
     <a href="https://us04web.zoom.us/j/9760904503?pwd=azByY3htY3hmOURmamxob3hQL1pDQT09"><div class="box d-flex flex-column justify-content-center">Polski</div></a>
