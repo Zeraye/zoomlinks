@@ -7,6 +7,7 @@ body, html {
 
 div.box {
     background-color: #1ab188;
+    /* background-color: #6488ea; */
     border-bottom: 5px solid #13232f;
     text-align: center;
     height: 12.5%;
@@ -14,6 +15,14 @@ div.box {
 
 div.box:hover {
     background-color: #179f7a;
+    /* background-color: #5377d9; */
+}
+
+div.box_live {
+    background-color: #ea3c53;
+    border-bottom: 5px solid #13232f;
+    text-align: center;
+    height: 12.5%;
 }
 
 a {
