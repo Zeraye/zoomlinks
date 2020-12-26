@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block js %}<script type="text/javascript" src="{% static 'js/slo3a/master.js' %}"></script>{% endblock %}
+
 {% block title %}Klasa 3a{% endblock %}
 
 {% block body %}
     <a><div class="box_live d-flex flex-column justify-content-center">Teraz: {{ curr_lesson }}</div></a>
-    <a href="{% url 'slo3a:math' %}"><div class="box d-flex flex-column justify-content-center">Matematyka - grupy</div></a>
-    <a href="{% url 'slo3a:physics' %}"><div class="box d-flex flex-column justify-content-center">Fizyka - grupy</div></a>
+    <a><div class="box d-flex flex-column justify-content-center">Matematyka - grupy</div></a>
+    <a><div class="box d-flex flex-column justify-content-center">Fizyka - grupy</div></a>
+    <a><div class="box d-flex flex-column justify-content-center">Angielski - grupy</div></a>
     <a href="https://us04web.zoom.us/j/9760904503?pwd=azByY3htY3hmOURmamxob3hQL1pDQT09" target="_blank"><div class="box d-flex flex-column justify-content-center">Polski</div></a>
-    <a href="{% url 'slo3a:english' %}"><div class="box d-flex flex-column justify-content-center">Angielski - grupy</div></a>
     <a href="https://us04web.zoom.us/j/9625315964?pwd=SFNmQUIvT0tRaHlDaVYrN3l5bzJVQT09" target="_blank"><div class="box d-flex flex-column justify-content-center">Religia</div></a>
     <a href="https://us04web.zoom.us/j/8098106082?pwd=UjR1RVN0T2d0bXpNcnZjaTJheHpFQT09" target="_blank"><div class="box d-flex flex-column justify-content-center">Wychowawcza</div></a>
     <a href="{% url 'classes:home' %}"><div class="box d-flex flex-column justify-content-center">Powrót do wyboru klasy</div></a>

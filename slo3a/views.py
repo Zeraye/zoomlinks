@@ -14,12 +14,3 @@ def home(request):
     context = {'curr_lesson': current_lesson(plan)}
 
     return render(request, 'slo3a/home.html', context=context)
-
-def math(request):
-    return render(request, 'slo3a/math.html')
-
-def physics(request):
-    return render(request, 'slo3a/physics.html')
-
-def english(request):
-    return render(request, 'slo3english.html')
