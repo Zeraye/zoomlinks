@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block js %}<script type="text/javascript" src="{% static 'js/profiles/master.js' %}"></script>{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/profiles/master.css' %}">{% endblock %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+<h1>Ustawienia</h1>
+{% if user.class_name == "slo3a" %}
+<form method="post">
+    {% csrf_token %}
+    <p>Obecny nauczyciel matematyki <strong>{{user.math_teacher}}</strong></p>
+    <p>Obecny nauczyciel angielskiego <strong>{{user.english_teacher}}</strong></p>
+
+    <p><label for="math_teacher">Nauczyciel matematyki</label></p>
+    <p><select id="math_teacher" name="math_teacher" required>
+        <option value="Buba">Buba</option>
+        <option value="Rubaj">Rubaj</option>
+    </select></p>
+
+    <p><label for="english_teacher">Nauczyciel angielskiego</label></p>
+    <p><select id="english_teacher" name="english_teacher" required>
+        <option value="Denys">Denys</option>
+        <option value="Kotlińska">Kotlińska</option>
+        <option value="Skowron">Skowron</option>
+        <option value="Kowalczyk">Kowalczyk</option>
+    </select></p>
+
+    <input type="submit" value="Zapisz">
+</form>
+
+{% endif %}
+<br>
+<a href="{% url 'profiles:home' %}">Wróć</a>
+
+{% endblock %}

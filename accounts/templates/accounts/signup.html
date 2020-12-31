@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block js %}<script type="text/javascript" src="{% static 'js/accounts/master.js' %}"></script>{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/accounts/master.css' %}">{% endblock %}
+
+{% block title %}Rejestracja{% endblock %}
+
+{% block body %}
+<form class="form" method="POST">
+    {% csrf_token %}
+
+    <body class="align">
+
+        <div class="grid">
+
+            <div id="login">
+
+                <h2><span class="fontawesome-lock"></span>Rejestracja</h2>
+
+                <fieldset>
+
+                    <p><label for="username">Nazwa użytkownika</label></p>
+                    <p><input id="username" type="text" name="username" maxlength="100" placeholder="Kuba" required></p>
+
+                    <p><label for="password1">Hasło</label></p>
+                    <p><input id="password1" type="password" name="password1" maxlength="100" placeholder="••••••••" required></p>
+
+                    <p><label for="password2">Powtórz hasło</label></p>
+                    <p><input id="password2" type="password" name="password2" maxlength="100" placeholder="••••••••" required></p>
+
+                    <p><label for="class_name">Klasa</label></p>
+                    <p><select id="class_name" name="class_name" required>
+                        <option value="slo3a">Klasa 3a SLO</option>
+                    </select></p>
+
+                    {% if form.errors %}
+                        <p class="error">
+                            Możliwe problemy:<br>
+                            Hasła nie są identyczne lub za słabe.<br>
+                            Nazwa użytkownika jest zajęta.<br>
+                            Spróbuj ponownie.
+                        </p>
+                    {% endif %}
+
+                    <p><input type="submit" value="Rejestracja"></p>
+                    <br>
+                    <p><a style="text-decoration:none;font-size:20px;font-weight:600;" href="{% url 'accounts:login' %}"><p style="text-align:center;">Masz już konto?</p></a></p>
+
+
+                </fieldset>
+
+            </div>
+
+        </div>
+
+    </body>
+</form>
+{% endblock %}

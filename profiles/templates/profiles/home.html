@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block js %}<script type="text/javascript" src="{% static 'js/profiles/master.js' %}"></script>{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/profiles/master.css' %}">{% endblock %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+Cześć <strong>{{ user.username }}</strong>!
+<br>
+Twoja klasa <strong>{{ user.class_name }}</strong>
+<br>
+<a href="{% url 'profiles:settings' %}">Ustawienia</a>
+<br>
+<a href="{% url 'classes:home' %}">Wróć do strony startowej</a>
+<br>
+<a href="{% url 'accounts:logout' %}">Wyloguj się</a>
+</div>
+{% endblock %}

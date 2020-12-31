@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'livereload',
     'classes',
     'slo3a',
+    'accounts',
+    'profiles',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'static')]
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+AUTH_USER_MODEL = 'accounts.UserProfile'
