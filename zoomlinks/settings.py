@@ -90,9 +90,9 @@ DATABASES = {
 }
 
 # if not (os.environ.get('DEBUG_VALUE') == 'True'):
-import dj_database_url
-DATABASE_URL = os.environ.get('DATABASE_URL')
-DATABASES['default'] = dj_database_url.config(default=DATABASE_URL)
+# import dj_database_url
+# DATABASE_URL = os.environ.get('DATABASE_URL')
+# DATABASES['default'] = dj_database_url.config(default=DATABASE_URL)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -137,32 +137,3 @@ STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'static')]
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 AUTH_USER_MODEL = 'accounts.UserProfile'
-import logging
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        },
-        'console':{
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    }
-}
