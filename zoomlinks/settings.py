@@ -137,7 +137,7 @@ STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'static')]
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 AUTH_USER_MODEL = 'accounts.UserProfile'
-
+import logging
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
