@@ -7,42 +7,34 @@
 {% block title %}Logowanie{% endblock %}
 
 {% block body %}
-<form class="form" method="POST">
-    {% csrf_token %}
+<div class="outer">
+    <div class="middle">
+        <div class="login">
+            <form method="POST">
+                {% csrf_token %}
+                    <h1 class="title">Logowanie</h1>
 
-    <body class="align">
-
-        <div class="grid">
-
-            <div id="login">
-
-                <h2><span class="fontawesome-lock"></span>Logowanie</h2>
-
-                <fieldset>
+                    <hr>
 
                     <p><label for="username">Nazwa użytkownika</label></p>
-                    <p><input id="username" type="text" name="username" maxlength="20" placeholder="Kuba" required></p>
+                    <p><input class="form-control form-control-lg" id="username" type="text" name="username" maxlength="20" placeholder="Nazwa użytkownika" required></p>
 
                     <p><label for="password">Hasło</label></p>
-                    <p><input id="password" type="password" name="password" maxlength="20" placeholder="••••••••" required></p>
+                    <p><input class="form-control form-control-lg" id="password" type="password" name="password" maxlength="20" placeholder="Hasło" required></p>
 
-                    {% if form.errors %}
-                        <p class="error">
-                            Niepoprawna nazwa użytkownika lub hasło.
-                            Spróbuj ponownie.
-                        </p>
-                    {% endif %}
 
-                    <p><input type="submit" value="Logowanie"></p>
-                    <br>
-                    <p><a style="text-decoration:none;font-size:20px;font-weight:600;" href="{% url 'accounts:signup' %}"><p style="text-align:center;">Nie masz konta?</p></a></p>
+                <p class="errors">
+                    {{form.username.errors}}
+                    {{form.password.errors}}
+                </p>
 
-                </fieldset>
+                <input class="form-control" type="submit" value="Logowanie"/>
 
-            </div>
+                <hr>
 
+                <p class="bottom"><a href="{% url 'accounts:signup' %}">Nie masz konta?</a></p>
+            </form>
         </div>
-
-    </body>
-</form>
+    </div>
+</div>
 {% endblock %}

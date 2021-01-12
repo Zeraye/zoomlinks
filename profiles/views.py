@@ -6,8 +6,8 @@ from .forms import SettingsForm
 from django import forms
 from django.urls import reverse
 from current_lesson.views import current_lesson
-    
-@login_required(login_url='/logowanie/')
+
+@login_required(login_url='/rejestracja/')
 def settings(request):
     def subject_saving(request, subject):
         try:
@@ -33,7 +33,7 @@ def settings(request):
         form = SettingsForm()
     return render(request, 'profiles/settings.html', {'form': form})
 
-@login_required(login_url='/logowanie/')
+@login_required(login_url='/rejestracja/')
 def myclass(request):
     if request.user.class_name == 'slo3a':
         plan = [
