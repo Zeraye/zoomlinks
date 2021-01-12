@@ -6,7 +6,7 @@ from .forms import SettingsForm
 from django import forms
 from django.urls import reverse
 from current_lesson.views import current_lesson
-
+    
 @login_required(login_url='/logowanie/')
 def settings(request):
     def subject_saving(request, subject):
