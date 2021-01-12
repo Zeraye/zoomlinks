@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block js %}<script type="text/javascript" src="{% static 'js/profiles/master.js' %}"></script>{% endblock %}
+{% if user.class_name == "slo3a" %}
+{% block js %}<script type="text/javascript" src="{% static 'js/3a/master.js' %}"></script>{% endblock %}
+{% endif %}
 
 {% block css %}<link rel="stylesheet" href="{% static 'css/profiles/master.css' %}">{% endblock %}
 
