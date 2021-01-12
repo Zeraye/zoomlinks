@@ -57,3 +57,8 @@ a, a:hover {
 a:hover {
     color: #dddddd;
 }
+
+.errors {
+    font-size: 0.9rem;
+    text-align: center;
+}

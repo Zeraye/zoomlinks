@@ -22,11 +22,13 @@
                     <p><label for="password">Hasło</label></p>
                     <p><input class="form-control form-control-lg" id="password" type="password" name="password" maxlength="20" placeholder="Hasło" required></p>
 
-
-                <p class="errors">
-                    {{form.username.errors}}
-                    {{form.password.errors}}
-                </p>
+                {% if form.non_field_errors %}
+                    <p class="errors">
+                    {% for error in form.non_field_errors %}
+                        {{ error }}
+                    {% endfor %}
+                    </p>
+                {% endif %}
 
                 <input class="form-control" type="submit" value="Logowanie"/>
 
