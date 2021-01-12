@@ -7,9 +7,10 @@ def current_lesson(plan):
     if day <= 4:
         lessons = plan[day]
     else:
-        return 'Po lekcjach'
+        return 'Wolne'
 
-    time = datetime.now().hour + datetime.now().minute
+
+    time = datetime.now().hour*60 + datetime.now().minute
 
     if 360 <= time <= 525: lesson_num = 0
     elif 525 < time <= 575: lesson_num = 1
@@ -21,8 +22,9 @@ def current_lesson(plan):
     elif 860 < time <= 910: lesson_num = 7
     else: lesson_num = None
 
-    if lesson_num != None and lesson_num < len(plan):
-        lesson = lessons[lesson_num]
+    if lesson_num != None and lesson_num < len(lessons):
+        print(lessons[lesson_num])
+        return lessons[lesson_num]
 
     else:
-        return 'Po lekcjach'
+        return 'Wolne'

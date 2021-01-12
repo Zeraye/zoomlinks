@@ -1,0 +1,47 @@
+body, html {
+    background-color: #13232f;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    user-select: none;
+    font-size: 1.5rem;
+}
+
+.name, .name:hover {
+    color: white;
+    font-size: 2rem;
+}
+
+.center {
+    height: 31rem;
+}
+@media only screen and (min-width: 1000px) {
+    select {
+        width: 30rem!important;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    option {
+        font-size: 1rem!important;
+    }
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    font-size: 3rem;
+    color: white;
+}
+
+.footer-left {
+    text-align: left;
+    float: left;
+}
+
+.footer-right {
+    text-align: right;
+    float: none;
+}
+
+.footer-link, .footer-link:hover {
+    color: white;
+}

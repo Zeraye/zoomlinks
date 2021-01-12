@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'livereload',
-    'classes',
-    'slo3a',
     'accounts',
     'profiles',
 ]
@@ -135,5 +133,5 @@ STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'static')]
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/logowanie/'
 AUTH_USER_MODEL = 'accounts.UserProfile'

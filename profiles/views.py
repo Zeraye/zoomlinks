@@ -7,12 +7,7 @@ from django import forms
 from django.urls import reverse
 from current_lesson.views import current_lesson
 
-# Create your views here.
-@login_required(login_url='/')
-def home(request):
-    return render(request, 'profiles/home.html')
-
-@login_required(login_url='/')
+@login_required(login_url='/logowanie/')
 def settings(request):
     def subject_saving(request, subject):
         try:
@@ -33,12 +28,12 @@ def settings(request):
 
         if form.is_valid():
             pass  # does nothing, just trigger the validation
-        return HttpResponseRedirect(reverse('profiles:home'))
+        return HttpResponseRedirect(reverse('profiles:class'))
     else:
         form = SettingsForm()
     return render(request, 'profiles/settings.html', {'form': form})
 
-@login_required(login_url='/')
+@login_required(login_url='/logowanie/')
 def myclass(request):
     if request.user.class_name == 'slo3a':
         plan = [
@@ -48,15 +43,7 @@ def myclass(request):
             ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Wychowawcza', 'Informatyka', 'W-f', 'Religia'],
             ['W-f', 'Religia', 'Polski', 'Fizyka - Mazi', 'Matematyka', 'Angielski', 'Angielski']
         ]
-    else:
-        plan = [
-            [],
-            [],
-            [],
-            [],
-            []
-        ]
 
     context = {'curr_lesson': current_lesson(plan)}
 
-    return render(request, 'profiles/myclass.html', context=context)
+    return render(request, 'profiles/class.html', context=context)
