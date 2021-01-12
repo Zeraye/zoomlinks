@@ -12,8 +12,10 @@
         <div class="login">
             <form method="POST">
                 {% csrf_token %}
-                    <h1 class="title">Rejestracja</h1>
-                    
+                    <h1 class="title">
+                        Rejestracja
+                    </h1>
+
                     <hr>
 
                     <p><label for="username">Nazwa użytkownika</label></p>
@@ -39,6 +41,13 @@
                 </p>
 
                 <input class="form-control" type="submit" value="Rejestracja"/>
+
+                <hr>
+
+
+                <p style="font-size: 1rem;text-align: center;">Aby korzystać ze strony <u>musisz</u> się zarejestrować!</p>
+                <p style="font-size: 1rem;text-align: center;"><u>Nikt</u> nie będzie miał dostępu do twojego hasła.</p>
+
 
                 <hr>
 
