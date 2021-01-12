@@ -9,7 +9,6 @@ def current_lesson(plan):
     else:
         return 'Wolne'
 
-
     time = datetime.now().hour*60 + datetime.now().minute
 
     if 360 <= time <= 525: lesson_num = 0
@@ -23,7 +22,6 @@ def current_lesson(plan):
     else: lesson_num = None
 
     if lesson_num != None and lesson_num < len(lessons):
-        print(lessons[lesson_num])
         return lessons[lesson_num]
 
     else:
