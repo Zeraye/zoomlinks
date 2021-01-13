@@ -47,8 +47,20 @@ body, html {
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 100%;
+}
+
+@media only screen and (min-width: 1800px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 .card:hover {
