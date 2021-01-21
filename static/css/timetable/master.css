@@ -63,7 +63,8 @@ body, html {
 
 }
 
-@media (hover: none) {
+/* @media (hover: none), (hover:on-demand) { */
+@media only screen and (max-width: 1000px) {
     .lesson {
         font-size: 2rem;
         height: 4rem;
