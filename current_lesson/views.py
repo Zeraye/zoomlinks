@@ -2,12 +2,20 @@ from django.shortcuts import render
 from datetime import datetime
 
 # Create your views here.
-def current_lesson(plan):
+def current_lesson(request, class_name):
+    if request.user.class_name == 'slo3a':
+        plan = [
+            ['Fizyka - Mazi', 'Informatyka', 'Angielski', 'Angielski', 'Matematyka', 'Polski'],
+            ['Fizyka - Mazi', 'W-f', 'Polski', 'Polski', 'Informatyka', 'Matematyka', 'Matematyka'],
+            ['Fizyka - Radek', 'Fizyka - Radek', 'Matematyka', 'Matematyka', 'His', 'Fizyka - Mazi', 'Polski'],
+            ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Wychowawcza', 'Informatyka', 'W-f', 'Religia'],
+            ['W-f', 'Religia', 'Polski', 'Fizyka - Mazi', 'Matematyka', 'Angielski', 'Angielski']
+        ]
     day = datetime.today().weekday()
     if day <= 4:
         lessons = plan[day]
     else:
-        return 'Wolne'
+        return 'Wolne', plan
 
     time = datetime.now().hour*60 + datetime.now().minute
 
@@ -22,7 +30,7 @@ def current_lesson(plan):
     else: lesson_num = None
 
     if lesson_num != None and lesson_num < len(lessons):
-        return lessons[lesson_num]
+        return lessons[lesson_num], plan
 
     else:
-        return 'Wolne'
+        return 'Wolne', plan

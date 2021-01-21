@@ -7,18 +7,20 @@ body, html {
     height: 100%;
     margin: 0;
 }
-.title {
+.center {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
     text-align: center;
-    padding-left: 10px;
-    font-size: 2rem
 }
 
+.name, .name:hover {
+    color: white;
+    font-size: 2rem!important;
+}
 @media only screen and (min-width: 1000px) {
-    body, html {
-        font-size: 1.3rem;
-    }
-    .title {
-        font-size: 2.2rem
+    p {
+        font-size: 1.5rem!important;
     }
 }
 
@@ -32,8 +34,29 @@ body, html {
         font-size: 1rem!important;
     }
 }
+@media only screen and (max-width: 1000px) {
+    p {
+        font-size: 1rem!important;
+    }
+}
+
+.no-decoration, .no-decoration:hover {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
 
 .link, .link:hover {
     color: white;
     padding: 10px;
+}
+
+
+.decoration {
+    text-decoration: none;
+    color: white;
+}
+
+.decoration:hover {
+    color: #dddddd;
 }

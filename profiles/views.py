@@ -35,15 +35,6 @@ def settings(request):
 
 @login_required(login_url='/rejestracja/')
 def myclass(request):
-    if request.user.class_name == 'slo3a':
-        plan = [
-            ['Fizyka - Mazi', 'Informatyka', 'Angielski', 'Angielski', 'Matematyka', 'Polski'],
-            ['Fizyka - Mazi', 'W-f', 'Polski', 'Polski', 'Informatyka', 'Matematyka', 'Matematyka'],
-            ['Fizyka - Radek', 'Fizyka - Radek', 'Matematyka', 'Matematyka', 'His', 'Fizyka - Mazi', 'Polski'],
-            ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Wychowawcza', 'Informatyka', 'W-f', 'Religia'],
-            ['W-f', 'Religia', 'Polski', 'Fizyka - Mazi', 'Matematyka', 'Angielski', 'Angielski']
-        ]
-
-    context = {'curr_lesson': current_lesson(plan)}
+    context = {'curr_lesson': current_lesson(request, 'slo3a')[0]}
 
     return render(request, 'profiles/class.html', context=context)

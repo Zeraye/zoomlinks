@@ -12,7 +12,6 @@ body, html {
     float: none;
     vertical-align: top;
     text-align: center;
-    padding-left: 20px;
 }
 
 .name, .name:hover {
@@ -20,10 +19,24 @@ body, html {
     font-size: 2rem;
 }
 
+.add {
+    /* background-color: transparent!important; */
+}
+
 .inside2 {
     height: 8rem;
     line-height: 8rem;
     background-color: #6178c9;
+    border-radius: 90px 90px 0 0;
+    margin-bottom: 2px;
+}
+
+.inside2top {
+    border-radius: 65px 65px 0 0;
+}
+
+.inside2bottom {
+    border-radius: 0 0 65px 65px;
 }
 
 .inside4 {
@@ -32,6 +45,13 @@ body, html {
     background-color: #6178c9;
 }
 
+.inside4top {
+    border-radius: 65px 65px 0 0;
+}
+
+.inside4bottom {
+    border-radius: 0 0 65px 65px;
+}
 .inside2:hover, .inside4:hover {
     background-color: #5067b8;
     color: white;
@@ -49,6 +69,7 @@ body, html {
     line-height: 16rem;
     text-align: center;
     font-size: 2.5rem;
+    border-radius: 65px;
 }
 
 .cards {

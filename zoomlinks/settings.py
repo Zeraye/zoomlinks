@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'livereload',
     'accounts',
     'profiles',
+    'timetable',
 ]
 
 MIDDLEWARE = [

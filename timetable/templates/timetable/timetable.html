@@ -1,20 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% if user.class_name == "slo3a" %}
-{% block js %}<script type="text/javascript" src="{% static 'js/3a/master.js' %}"></script>{% endblock %}
-{% endif %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/timetable/master.css' %}">{% endblock %}
 
-{% block css %}<link rel="stylesheet" href="{% static 'css/profiles/master.css' %}">{% endblock %}
-
-{% block title %}Ustawienia{% endblock %}
+{% block title %}Plan zajęć{% endblock %}
 
 {% block body %}
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto w-100 center">
             <li class="nav-item active">
-                <p class="name">Ustawienia</p>
+                <p class="name">Cześć <strong>{{user.username}}</strong>, obecna lekcja <strong>{{curr_lesson}}</strong></p>
             </li>
         </ul>
         <a href="{% url 'profiles:class' %}" class="link navbar-text"">
@@ -41,42 +37,58 @@
         </a>
     </nav>
 
-    <div class="container-fluid">
-        <form method="post">
-            {% csrf_token %}
-            {% if user.class_name == "slo3a" %}
-            <p>Twoja klasa <strong>3A.</strong></p>
-            {% if user.math_teacher == "" %}
-            <p>Obecny nauczyciel matematyki <strong>nie wybrano.</strong></p>
-            {% else %}
-            <p>Obecny nauczyciel matematyki <strong>{{user.math_teacher}}.</strong></p>
-            {% endif %}
-            {% if user.math_teacher == "" %}
-            <p>Obecny nauczyciel angielskiego <strong>nie wybrano.</strong></p>
-            {% else %}
-            <p>Obecny nauczyciel angielskiego <strong>{{user.english_teacher}}.</strong></p>
-            {% endif %}
+    <div class="days">
+        <div class="day nomargin">
+            <div class="title">Poniedziałek</div>
+            <hr class="line">
+            <div class="lessons">
+                {% for lesson in plan.0 %}
+                    <div class="lesson">{{lesson}}</div>
+                {% endfor %}
+            </div>
+        </div>
 
+        <div class="day">
+            <div class="title">Wtorek</div>
+            <hr class="line">
+            <div class="lessons">
+                {% for lesson in plan.1 %}
+                    <div class="lesson">{{lesson}}</div>
+                {% endfor %}
+            </div>
+        </div>
 
-            <!-- <p><label for="math_teacher"></label></p> -->
-            <p><select class="form-select form-select-lg mb-4" id="math_teacher" name="math_teacher" required>
-                <option class="" disabled selected>Nauczyciel matematyki</option>
-                <option value="Buba">Buba</option>
-                <option value="Rubaj">Rubaj</option>
-            </select></p>
+        <div class="day">
+            <div class="title">Środa</div>
+            <hr class="line">
+            <div class="lessons">
+                {% for lesson in plan.2 %}
+                    <div class="lesson">{{lesson}}</div>
+                {% endfor %}
+            </div>
+        </div>
 
-            <!-- <p><label for="english_teacher"></label></p> -->
-            <p><select class="form-select form-select-lg mb-4" id="english_teacher" name="english_teacher" required>
-                <option class="" disabled selected>Nauczyciel angielskiego</option>
-                <option value="Denys">Denys</option>
-                <option value="Kotlińska">Kotlińska</option>
-                <option value="Skowron">Skowron</option>
-                <option value="Kowalczyk">Kowalczyk</option>
-            </select></p>
+        <div class="day">
+            <div class="title">Czwartek</div>
+            <hr class="line">
+            <div class="lessons">
+                {% for lesson in plan.3 %}
+                    <div class="lesson">{{lesson}}</div>
+                {% endfor %}
+            </div>
+        </div>
 
-            {% endif %}
-            <input class="btn btn-secondary btn-lg" type="submit" value="Zapisz">
-        </form>
+        <div class="day">
+            <div class="title">Piątek</div>
+            <hr class="line">
+            <div class="lessons">
+                {% for lesson in plan.4 %}
+                    <div class="lesson">{{lesson}}</div>
+                {% endfor %}
+            </div>
+        </div>
+
     </div>
 </div>
+
 {% endblock %}
