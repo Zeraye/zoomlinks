@@ -63,7 +63,15 @@ body, html {
 
 }
 
-@media only screen and (max-width: 800px) {
+@media (hover: none) {
+    .lesson {
+        font-size: 2rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+    .title {
+        font-size: 2.5rem!important;
+    }
     .day {
         float: none;
         width: 100%;
