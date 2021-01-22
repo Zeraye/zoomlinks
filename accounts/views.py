@@ -10,7 +10,7 @@ from django.contrib.auth import login, authenticate
 # Create your views here.
 class SignUp(CreateView):
     form_class = forms.SignUpForm
-    success_url = reverse_lazy('profiles:settings')
+    success_url = reverse_lazy('settings:settings')
     template_name = 'accounts/signup.html'
 
     def form_valid(self, form):
