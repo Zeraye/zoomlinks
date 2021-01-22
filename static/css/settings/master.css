@@ -60,3 +60,13 @@ body, html {
 .decoration:hover {
     color: #dddddd;
 }
+
+select:required:invalid {
+  color: black;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
