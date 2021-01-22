@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(document).on('click', '.card', function () {
+    $(document).on('click', '.card',  function () {
         $('.add').removeClass('add');
         $('.inside2').remove();
         $('.inside4').remove();
@@ -26,6 +26,8 @@ $(document).ready(function () {
             $(this).append($("<div class='inside4'><a href='https://us04web.zoom.us/j/75537981297?pwd=L3BHL0tkZXFsTEx5VjV3WS8yQ2VJUT09' class='no-decoration' target='_blank'>Kotlińska</a></div>"))
             $(this).append($("<div class='inside4'><a href='https://zoom.us/j/6717774670?pwd=REhhSXdCaXphRFQyM0pVUGJ3THFBZz09' class='no-decoration' target='_blank'>Skowron</a></div>"))
             $(this).append($("<div class='inside4 inside4bottom'><a href='https://us04web.zoom.us/j/4312598558?pwd=RDlUelJXTk1mUmxoMzNPOUZJa2IxZz09' class='no-decoration' target='_blank'>Kowalczyk</a></div>"))
+
         }
     });
+
 });

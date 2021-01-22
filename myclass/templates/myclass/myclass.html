@@ -1,0 +1,27 @@
+{% extends "navbar_template.html" %}
+{% load static %}
+
+{% if user.class_name == "slo3a" %}
+{% block js %}<script type="text/javascript" src="{% static 'js/3a/master.js' %}"></script>{% endblock %}
+{% endif %}
+
+{% block icon %}<link rel="icon" href="{% static 'images/house-fill.ico' %}">{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/myclass/master.css' %}">{% endblock %}
+
+{% block title %}Moja klasa{% endblock %}
+
+{% block content %}
+<div class="cards">
+    {% for lesson in lessons_today  %}
+        {% if links|get_item:lesson != '' %}
+        {% if lesson == current_lesson %}
+        <div class="card lesson_now"><a href='{{links|get_item:lesson}}' class='no-decoration' target='_blank'>{{lesson}}</a></div>
+        {% else %}
+        <div class="card"><a href='{{links|get_item:lesson}}' class='no-decoration' target='_blank'>{{lesson}}</a></div>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}

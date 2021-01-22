@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'livereload',
     'accounts',
-    'profiles',
+    'settings',
+    'myclass',
     'timetable',
 ]
 

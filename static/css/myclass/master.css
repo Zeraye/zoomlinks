@@ -19,44 +19,6 @@ body, html {
     font-size: 2rem;
 }
 
-.add {
-    /* background-color: transparent!important; */
-}
-
-.inside2 {
-    height: 8rem;
-    line-height: 8rem;
-    background-color: #6178c9;
-    border-radius: 90px 90px 0 0;
-    margin-bottom: 2px;
-}
-
-.inside2top {
-    border-radius: 65px 65px 0 0;
-}
-
-.inside2bottom {
-    border-radius: 0 0 65px 65px;
-}
-
-.inside4 {
-    height: 4rem;
-    line-height: 4rem;
-    background-color: #6178c9;
-}
-
-.inside4top {
-    border-radius: 65px 65px 0 0;
-}
-
-.inside4bottom {
-    border-radius: 0 0 65px 65px;
-}
-.inside2:hover, .inside4:hover {
-    background-color: #5067b8;
-    color: white;
-}
-
 .no-decoration, .no-decoration:hover {
     text-decoration: none;
     color: white;
@@ -70,6 +32,10 @@ body, html {
     text-align: center;
     font-size: 2.5rem;
     border-radius: 65px;
+}
+
+.card:hover {
+    background-color: #5067b8;
 }
 
 .cards {
@@ -92,29 +58,15 @@ body, html {
     }
 }
 
-.card:hover {
-    background-color: #5067b8;
+.lesson_now {
+    background-color: #ed2939;
 }
 
-.current, .current:hover {
-    background-color: #f04747;
+.lesson_now:hover {
+    background-color: #dc1828;
 }
 
 .link, .link:hover {
     color: white;
     padding: 10px;
-}
-
-.page-content {
-    min-height: 100%;
-    margin-bottom: -80px;
-}
-
-.decoration {
-    text-decoration: none;
-    color: white;
-}
-
-.decoration:hover {
-    color: #dddddd;
 }

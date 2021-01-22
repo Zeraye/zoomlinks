@@ -1,0 +1,37 @@
+{% extends "navbar_template.html" %}
+{% load static %}
+
+{% block icon %}<link rel="icon" href="{% static 'images/tools.ico' %}">{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/settings/master.css' %}">{% endblock %}
+
+{% block title %}Ustawienia{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <form method="post">
+        {% csrf_token %}
+        <p>Twoja klasa <strong>{{user.class_name|slice:"3:"|upper}}.</strong></p>
+        {% if user.class_name == "slo3a" %}
+        <p>Obecny nauczyciel matematyki <strong>{{user.math_teacher|default:"nie wybrano"}}.</strong></p>
+        <p>Obecny nauczyciel angielskiego <strong>{{user.english_teacher|default:"nie wybrano"}}.</strong></p>
+
+        <p><select class="form-select form-select-lg mb-4" id="math_teacher" name="math_teacher" required>
+            <option class="" disabled selected>Nauczyciel matematyki</option>
+            <option value="Buba">Buba</option>
+            <option value="Rubaj">Rubaj</option>
+        </select></p>
+
+        <p><select class="form-select form-select-lg mb-4" id="english_teacher" name="english_teacher" required>
+            <option class="" disabled selected>Nauczyciel angielskiego</option>
+            <option value="Denys">Denys</option>
+            <option value="Kotlińska">Kotlińska</option>
+            <option value="Skowron">Skowron</option>
+            <option value="Kowalczyk">Kowalczyk</option>
+        </select></p>
+        {% endif %}
+
+        <input class="btn btn-secondary btn-lg" type="submit" value="Zapisz">
+    </form>
+</div>
+{% endblock %}

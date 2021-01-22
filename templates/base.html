@@ -30,11 +30,15 @@
             gtag('config', 'G-0D8TWRSPCQ');
         </script>
 
-        <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}"/>
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}"/> -->
+
+        {% block icon %}{% endblock %}
 
         {% block js %}{% endblock %}
 
         {% block css %}{% endblock %}
+
+
 
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
