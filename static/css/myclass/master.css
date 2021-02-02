@@ -32,6 +32,9 @@ body, html {
     text-align: center;
     font-size: 2.5rem;
     border-radius: 65px;
+    box-shadow: 10px 10px 10px #111111;
+    transition-timing-function: ease-out;
+    transition: 1s;
 }
 
 .card:hover {
@@ -66,7 +69,11 @@ body, html {
     background-color: #dc1828;
 }
 
-.link, .link:hover {
+.link {
     color: white;
     padding: 10px;
+}
+
+.link:hover {
+    color: #dddddd;
 }

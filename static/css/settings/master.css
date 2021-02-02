@@ -46,9 +46,13 @@ body, html {
     display: block;
 }
 
-.link, .link:hover {
+.link {
     color: white;
     padding: 10px;
+}
+
+.link:hover {
+    color: #dddddd;
 }
 
 
