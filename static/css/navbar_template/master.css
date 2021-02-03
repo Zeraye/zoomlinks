@@ -22,3 +22,7 @@
     color: white;
     font-size: 2rem;
 }
+
+.name:hover span {display:none}
+/* .name:hover:before {content:"Jak tam mija Ci dzień?"} */
+.name:hover:before {content:"Teoria z matmy, a ja programuje. To nie skończy się dobrze :c"}
