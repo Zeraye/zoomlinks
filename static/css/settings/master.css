@@ -3,55 +3,44 @@ body, html {
     font-family: 'Poppins', sans-serif;
     color: white;
     user-select: none;
-    font-size: 1rem;
     height: 100%;
     margin: 0;
 }
 
-@media only screen and (min-width: 1000px) {
-    p {
-        font-size: 1.5rem!important;
-    }
+.timetable-icon, .settings-icon, .accounts-icon, .myclass-icon {
+    background-color: #6178c9;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #111111;
+    margin-left: 10px;
+}
+
+.settings-icon {
+    background-color: #4056a7;
+}
+
+.timetable-icon:hover, .settings-icon:hover, .accounts-icon:hover, .myclass-icon:hover {
+    background-color: #4056a7;
 }
 
 @media only screen and (min-width: 1000px) {
+    .settings-text {
+        font-size: 3rem!important;
+    }
     select {
-        width: 30rem!important;
+        font-size: 3rem!important;
+        width: 40rem!important;
     }
 }
+
 @media only screen and (max-width: 1000px) {
-    option {
-        font-size: 1rem!important;
+    .settings-text {
+        font-size: 2rem!important;
+    }
+    select {
+        font-size: 2rem!important;
     }
 }
-@media only screen and (max-width: 1000px) {
-    p {
-        font-size: 1rem!important;
-    }
-}
 
-.no-decoration, .no-decoration:hover {
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-
-.decoration {
-    text-decoration: none;
-    color: white;
-}
-
-.decoration:hover {
-    color: #dddddd;
-}
-
-select:required:invalid {
-  color: black;
-}
-option[value=""][disabled] {
-  display: none;
-}
-option {
-  color: black;
-}
+select:required:invalid {color: black;}
+option[value=""][disabled] {display: none;}
+option {color: black;}

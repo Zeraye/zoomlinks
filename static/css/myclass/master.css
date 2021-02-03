@@ -7,6 +7,21 @@ body, html {
     margin: 0;
 }
 
+.timetable-icon, .settings-icon, .accounts-icon, .myclass-icon {
+    background-color: #6178c9;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #111111;
+    margin-left: 10px;
+}
+
+.myclass-icon {
+    background-color: #4056a7;
+}
+
+.timetable-icon:hover, .settings-icon:hover, .accounts-icon:hover, .myclass-icon:hover {
+    background-color: #4056a7;
+}
+
 .no-decoration, .no-decoration:hover {
     text-decoration: none;
     color: white;
@@ -26,7 +41,8 @@ body, html {
 }
 
 .card:hover {
-    background-color: #5067b8;
+    /* background-color: #5067b8; */
+    background-color: #4056a7;
     box-shadow: 15px 15px 15px #000000;
     transform: scale(1.02);
 }

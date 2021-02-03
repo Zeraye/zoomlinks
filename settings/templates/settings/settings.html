@@ -8,7 +8,7 @@
 {% block title %}Ustawienia{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid settings-text">
     <form method="post">
         {% csrf_token %}
         <p>Twoja klasa <strong>{{user.class_name|slice:"3:"|upper}}.</strong></p>

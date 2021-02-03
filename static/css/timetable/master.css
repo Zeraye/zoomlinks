@@ -7,6 +7,21 @@ body, html {
     margin: 0;
 }
 
+.timetable-icon, .settings-icon, .accounts-icon, .myclass-icon {
+    background-color: #6178c9;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #111111;
+    margin-left: 10px;
+}
+
+.timetable-icon {
+    background-color: #4056a7;
+}
+
+.timetable-icon:hover, .settings-icon:hover, .accounts-icon:hover, .myclass-icon:hover {
+    background-color: #4056a7;
+}
+
 .present-day {
     font-size: 2.5rem;
     border-radius: 40px;
@@ -45,7 +60,8 @@ hr.line {
 }
 
 .day:hover {
-    background-color: #5067b8;
+    /* background-color: #5067b8; */
+    background-color: #4056a7;
     transform: scale(1.02);
 }
 
