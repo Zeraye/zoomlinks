@@ -1,0 +1,22 @@
+.link {
+    color: white;
+    padding: 10px;
+    transition-timing-function: ease-out;
+    transition: 1s;
+}
+
+.link:hover {
+    color: #cccccc;
+}
+
+.center {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    text-align: center;
+}
+
+.name, .name:hover {
+    color: white;
+    font-size: 2rem;
+}
