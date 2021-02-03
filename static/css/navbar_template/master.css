@@ -2,11 +2,13 @@
     color: white;
     padding: 10px;
     transition-timing-function: ease-out;
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .link:hover {
-    color: #cccccc;
+    /* color: #6178c9; */
+    color: #5067b8;
+    transform: scale(1.1);
 }
 
 .center {

@@ -22,11 +22,13 @@ body, html {
     border-radius: 65px;
     box-shadow: 10px 10px 10px #111111;
     transition-timing-function: ease-out;
-    transition: 1s;
+    transition-duration: 0.8s;
 }
 
 .card:hover {
     background-color: #5067b8;
+    box-shadow: 15px 15px 15px #000000;
+    transform: scale(1.02);
 }
 
 .cards {
