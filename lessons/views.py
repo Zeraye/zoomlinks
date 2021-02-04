@@ -19,8 +19,10 @@ def lessons(request, class_name):
             'Angielski': 'https://us04web.zoom.us/j/6708313679?pwd=RWlUODlGOTFndFZSbHBRdFZoT0V3dz09',
             'Polski': 'https://us04web.zoom.us/j/9760904503?pwd=azByY3htY3hmOURmamxob3hQL1pDQT09',
             'Religia': 'https://us04web.zoom.us/j/9625315964?pwd=SFNmQUIvT0tRaHlDaVYrN3l5bzJVQT09',
-            # 'Wychowawcza': 'https://us04web.zoom.us/j/8098106082?pwd=UjR1RVN0T2d0bXpNcnZjaTJheHpFQT09',
-            'Wychowawcza': 'https://us04web.zoom.us/j/2225987302?pwd=dkYyNUU0V0hoUEdZckVsVWFRZzlXQT09',
+            # garbacik
+            'Wychowawcza': 'https://us04web.zoom.us/j/8098106082?pwd=UjR1RVN0T2d0bXpNcnZjaTJheHpFQT09',
+            # miska
+            # 'Wychowawcza': 'https://us04web.zoom.us/j/2225987302?pwd=dkYyNUU0V0hoUEdZckVsVWFRZzlXQT09',
             'His': 'https://us04web.zoom.us/j/78026871274?pwd=ZUhtV0M0cGE2RXROREFkS2t1THFZUT09'
         }
 
