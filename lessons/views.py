@@ -8,7 +8,7 @@ def lessons(request, class_name):
             'Poniedziałek': ['Fizyka - Mazi', 'Informatyka', 'Angielski', 'Angielski', 'Matematyka', 'Matematyka', 'Polski'],
             'Wtorek': ['Fizyka - Mazi', 'W-f', 'Polski', 'Polski', 'Informatyka', 'Matematyka', 'Matematyka'],
             'Środa': ['Fizyka - Radek', 'Fizyka - Radek', 'Matematyka', 'Matematyka', 'His', 'Fizyka - Mazi', 'Polski'],
-            'Czwartek': ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Wychowawcza - Athiana (Miska)', 'Informatyka', 'W-f', 'Religia'],
+            'Czwartek': ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Wychowawcza - Miska', 'Informatyka', 'W-f', 'Religia'],
             'Piątek': ['W-f', 'Religia', 'Polski', 'Fizyka - Mazi', 'Matematyka', 'Angielski', 'Angielski']
         }
 
@@ -20,7 +20,7 @@ def lessons(request, class_name):
             'Polski': 'https://us04web.zoom.us/j/9760904503?pwd=azByY3htY3hmOURmamxob3hQL1pDQT09',
             'Religia': 'https://us04web.zoom.us/j/9625315964?pwd=SFNmQUIvT0tRaHlDaVYrN3l5bzJVQT09',
             # 'Wychowawcza': 'https://us04web.zoom.us/j/8098106082?pwd=UjR1RVN0T2d0bXpNcnZjaTJheHpFQT09',
-            'Wychowawcza - Athiana (Miska)': 'https://us04web.zoom.us/j/2225987302?pwd=dkYyNUU0V0hoUEdZckVsVWFRZzlXQT09',
+            'Wychowawcza - Miska': 'https://us04web.zoom.us/j/2225987302?pwd=dkYyNUU0V0hoUEdZckVsVWFRZzlXQT09',
             'His': 'https://us04web.zoom.us/j/78026871274?pwd=ZUhtV0M0cGE2RXROREFkS2t1THFZUT09'
         }
 
