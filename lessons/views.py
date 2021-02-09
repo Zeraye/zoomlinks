@@ -23,7 +23,7 @@ def lessons(request, class_name):
             'Wychowawcza': 'https://us04web.zoom.us/j/8098106082?pwd=UjR1RVN0T2d0bXpNcnZjaTJheHpFQT09',
             # miska
             # 'Wychowawcza': 'https://us04web.zoom.us/j/2225987302?pwd=dkYyNUU0V0hoUEdZckVsVWFRZzlXQT09',
-            'His': 'https://us04web.zoom.us/j/78026871274?pwd=ZUhtV0M0cGE2RXROREFkS2t1THFZUT09'
+            'His': 'https://us04web.zoom.us/j/75001049351?pwd=WmI0Q0QyQlpFSnl6cmUxL3JNcE1EQT09'
         }
 
         if request.user.math_teacher == 'Buba':
