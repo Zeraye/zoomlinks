@@ -8,13 +8,26 @@
 {% block title %}Moja klasa{% endblock %}
 
 {% block content %}
+
 <div class="cards">
-    {% for lesson in lessons_today  %}
+    {% for lesson, time in lessons_today  %}
         {% if links|get_item:lesson != '' %}
         {% if lesson == current_lesson %}
-        <div class="card lesson_now"><a href='{{links|get_item:lesson}}' class='no-decoration' target='_blank'>{{lesson}}</a></div>
+        <div class="card lesson_now">
+            <a href='{{links|get_item:lesson}}' class='no-decoration lesson_name' target='_blank'>
+                {{lesson}}
+                <br>
+                {{time}}
+            </a>
+        </div>
         {% else %}
-        <div class="card"><a href='{{links|get_item:lesson}}' class='no-decoration' target='_blank'>{{lesson}}</a></div>
+        <div class="card">
+            <a href='{{links|get_item:lesson}}' class='no-decoration lesson_name' target='_blank'>
+                {{lesson}}
+                <br>
+                {{time}}
+            </a>
+        </div>
         {% endif %}
         {% endif %}
     {% endfor %}

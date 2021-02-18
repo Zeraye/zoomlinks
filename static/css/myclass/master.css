@@ -31,13 +31,20 @@ body, html {
 .card {
     background-color: #6178c9;
     height: 16rem;
-    line-height: 16rem;
+    /* line-height: 16rem; */
     text-align: center;
     font-size: 2.5rem;
     border-radius: 65px;
     box-shadow: 10px 10px 10px #111111;
     transition-timing-function: ease-out;
     transition-duration: 0.8s;
+    padding-top: 4rem;
+
+}
+
+.lesson_name {
+    width: 100%;
+    height: 100%;
 }
 
 .card:hover {
