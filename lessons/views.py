@@ -8,7 +8,7 @@ def lessons(request, class_name):
             'Poniedziałek': ['Fizyka - Mazi', 'Informatyka', 'Angielski', 'Angielski', 'Matematyka', 'Matematyka', 'Polski'],
             'Wtorek': ['Fizyka - Mazi', 'W-f', 'Polski', 'Polski', 'Informatyka', 'Matematyka', 'Matematyka'],
             'Środa': ['Fizyka - Radek', 'Fizyka - Radek', 'Matematyka', 'Matematyka', 'His', 'Fizyka - Mazi', 'Polski'],
-            'Czwartek': ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Miska Katarzyna', 'Informatyka', 'W-f', 'Religia'],
+            'Czwartek': ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Wychowawcza', 'Informatyka', 'W-f', 'Religia'],
             'Piątek': ['W-f', 'Religia', 'Polski', 'Fizyka - Mazi', 'Matematyka', 'Angielski', 'Angielski']
         }
 
