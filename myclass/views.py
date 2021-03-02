@@ -19,7 +19,12 @@ def myclass(request):
     lessons_today = list(map(lambda lesson, time: (lesson, time), lessons_today,
         ['8:00-8:45', '8:50-9:35', '9:45-10:30', '10:40-11:25', '11:30-12:15', '12:45-13:30', '13:35-14:20', '14:25-15:10', ]))
 
-    print(lessons_today)
+    if today_day_name == 'Sobota' or today_day_name == 'Niedziela':
+        lessons_all[0] = None
+        lessons_today = []
+        for element in lessons_all[1]:
+            lessons_today += lessons_all[1][element]
+        lessons_today = list(set(lessons_today))
 
     context = {'current_lesson': lessons_all[0],
                'lessons_today': lessons_today,
