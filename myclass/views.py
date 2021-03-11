@@ -20,7 +20,7 @@ def myclass(request):
         ['8:00-8:45', '8:50-9:35', '9:45-10:30', '10:40-11:25', '11:30-12:15', '12:45-13:30', '13:35-14:20', '14:25-15:10', ]))
 
     if today_day_name == 'Sobota' or today_day_name == 'Niedziela':
-        lessons_all[0] = None
+        lessons_all[0] = ''
         lessons_today = []
         for element in lessons_all[1]:
             lessons_today += lessons_all[1][element]

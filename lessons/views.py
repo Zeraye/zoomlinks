@@ -40,7 +40,8 @@ def lessons(request, class_name):
         elif request.user.english_teacher == 'Skowron':
             links['Angielski'] = 'https://zoom.us/j/6717774670?pwd=REhhSXdCaXphRFQyM0pVUGJ3THFBZz09'
         elif request.user.english_teacher == 'Kowalczyk':
-            links['Angielski'] = 'https://us04web.zoom.us/j/4312598558?pwd=RDlUelJXTk1mUmxoMzNPOUZJa2IxZz09'
+            # links['Angielski'] = 'https://us04web.zoom.us/j/4312598558?pwd=RDlUelJXTk1mUmxoMzNPOUZJa2IxZz09'
+            links['Angielski'] = 'https://us04web.zoom.us/j/5419812179?pwd=V3o2cWtXd0Z4R2FFKzZVdmsrWHVvQT09'
 
     day = datetime.today().weekday()
     time = datetime.now().hour*60 + datetime.now().minute
