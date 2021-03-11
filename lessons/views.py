@@ -25,7 +25,7 @@ def lessons(request, class_name):
             # 'Wychowawcza': 'https://us04web.zoom.us/j/2225987302?pwd=dkYyNUU0V0hoUEdZckVsVWFRZzlXQT09',
 
             'His': 'https://us04web.zoom.us/j/9276883785?pwd=dXhVZERYNDVjR1BUUHY5MWc3dW1NQT09',
-            'Miska Katarzyna': 'https://us04web.zoom.us/j/76298191978?pwd=dTYxVTZCcUZJYlliWGRBYVoxYk1JUT09'
+            'Miska Katarzyna': 'https://us04web.zoom.us/j/79728242859?pwd=SnFORkNPSHV4Z3NiWi9KYUU0WTRsdz09'
         }
 
         if request.user.math_teacher == 'Buba':
