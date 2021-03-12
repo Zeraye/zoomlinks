@@ -56,7 +56,11 @@ def lessons(request, class_name):
     if day == 6: day_name = 'Niedziela'
 
     if day <= 4:
-        today_lessons = timetable[day_name]
+        try:
+            today_lessons = timetable[day_name]
+        except KeyError:
+            today_lessons = []
+
         if 360 < time <= 525: lesson_number = 0
         elif 525 < time <= 575: lesson_number = 1
         elif 575 < time <= 630: lesson_number = 2
