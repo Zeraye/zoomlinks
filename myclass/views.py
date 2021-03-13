@@ -14,15 +14,12 @@ def myclass(request):
         for lesson_name in lessons_all[2]:
             lessons_today.append((lesson_name, '11:30-12:30'))
 
-    # print(lessons_today)
-
     lessons_today = list(map(lambda lesson, time: (lesson, time), lessons_today,
         ['8:00-8:45', '8:50-9:35', '9:45-10:30', '10:40-11:25', '11:30-12:15', '12:45-13:30', '13:35-14:20', '14:25-15:10', ]))
 
     if today_day_name == 'Sobota' or today_day_name == 'Niedziela':
         lessons_today = []
         for element in lessons_all[1]:
-            print(element)
             lessons_today += lessons_all[1][element]
         lessons_today = list(set(lessons_today))
         lessons_today = list(map(lambda lesson, time: (lesson, time), lessons_today,
