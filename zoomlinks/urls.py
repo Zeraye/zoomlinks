@@ -21,5 +21,7 @@ urlpatterns = [
     path('', include(('settings.urls', 'settings'), namespace='settings')),
     path('', include(('myclass.urls', 'myclass'), namespace='myclass')),
     path('', include(('timetable.urls', 'timetable'), namespace='timetable')),
+    path('', include(('timers.urls', 'timers'), namespace='timers')),
+    path('', include(('chatbot.urls', 'chatbot'), namespace='chatbot')),
     path('admin/', admin.site.urls),
 ]

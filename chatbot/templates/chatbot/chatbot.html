@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/chatbot/master.css' %}">
+        <script type="text/javascript" src="{% static 'js/chatbot/master.js' %}"></script>
+        <title>Chatbot</title>
+        <link rel="icon" href="{% static 'images/chat-dots.ico' %}">
+    </head>
+    <body>
+        <div class="main-window">
+            <div class="messages" id="style-1">
+                <!-- <div class="outer-message"><div class="message other-message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div></div>
+                <div class="outer-message"><div class="message my-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
+                <div class="outer-message"><div class="message other-message">Lorem Ipsum g,fdp[, pofdo, gdfpo gdfmgfdto make a type</div></div>
+                <div class="outer-message"><div class="message other-message">Loremdsadsads ad samdsamsdampo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
+                <div class="outer-message"><div class="message my-message">Loremdsadsads ad samdsamsdampo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div> -->
+                {% for message in messages %}
+                    {% if message.0 == "my" %}
+                        <div class='outer-message'><div class='message my-message'> {{message.1}}</div></div>
+                    {% else %}
+                        <div class='outer-message'><div class='message other-message'> {{message.1}}</div></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="bottom-bar">
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <label for="message-value"></label>
+                    <div class="message-send-bar">
+                        <input type="text" class="chat-input" id="message-value" name="message-value" placeholder="Aa" autocomplete="off" autofocus>
+                    </div>
+
+                    <label for="past-messages"></label>
+                    <input type="text" id="past-messages" name="past-messages" value="{{messages}}" hidden>
+
+                    <input type="submit" id="submit" value="OK" hidden>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-double-right send-icon" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

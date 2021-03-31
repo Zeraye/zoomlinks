@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'settings',
     'myclass',
     'timetable',
+    'timers',
+    'chatbot'
 ]
 
 MIDDLEWARE = [
