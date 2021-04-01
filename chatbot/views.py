@@ -16,7 +16,7 @@ def chatbot(request):
 
             message = request.POST['message-value']
             context['messages'].append(('my', message))
-            answer = cb.find_answer(message)
+            answer = cb.response(message)
             context['messages'].append(('bot', answer))
 
 

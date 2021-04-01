@@ -1,54 +1,47 @@
 import difflib
-import json
 import random
+import json
 import os
 
-def similarity(word1, word2):
-    return difflib.SequenceMatcher(None,word1,word2).ratio()
-
-def read():
+# reading databse file
+def read(file_name):
     dir_name = os.path.dirname(os.path.abspath(__file__))
-    full_path = os.path.join(dir_name, 'database.json')
-    with open(full_path, "r") as file:
-        new_data = json.load(file)
-        return new_data
+    db_path = os.path.join(dir_name, file_name + '.json')
+    with open(db_path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+        return data
 
-def write(data, new_data):
-    dir_name = os.path.dirname(os.path.abspath(__file__))
-    full_path = os.path.join(dir_name, 'database.json')
-    with open(full_path, "r+") as file:
-        data.update(new_data)
-        json.dump(data, file, indent=4)
+# sentences similarity
+similarity = lambda word1, word2: difflib.SequenceMatcher(None, word1, word2).ratio()
 
-def find_answer(word):
-    data = read()
-    best_accuracy = 0
-    best_message = ""
-    for message in data:
-        if similarity(message, word) > best_accuracy:
-            best_accuracy = similarity(message, word)
-            best_message = message
+# simpfily sentence by removing special characters and lowering everything
+def simplify(sentence):
+    sentence = [sentence[i].lower() for i in range(len(sentence))]
+    special_chars = ['ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż']
+    counterpart_chars = ['a', 'c', 'e', 'l', 'n', 'o', 's', 'x', 'z']
+    for char in sentence:
+        if char in special_chars:
+            sentence[sentence.index(char)] = counterpart_chars[special_chars.index(char)]
+    return ''.join(sentence)
 
-    # answer, accuracy, original_message
-    # return random.choice(data[best_message]), best_accuracy, best_message
+# getting response
+def response(query):
+    data = read('database')
+    similarity_mesh = [0 for i in range(len(data))]
 
-    # answer
-    return random.choice(data[best_message])
+    # find most similar pattern
+    position = 0
+    for tag in data:
+        for pattern in data[tag]["patterns"]:
+            similarity_mesh[position] =  max(similarity(simplify(pattern), simplify(query)), similarity_mesh[position])
+        position += 1
 
-def new_find_answer(query):
-    data = read()
-    best_query = difflib.get_close_matches(query, data)
-    return data[best_query[0]]
+    # ONLY FOR DEVELOPMENT
+    print('[dev] >> ' + str(max(similarity_mesh)))
 
-def add_answer(message, answer):
-    data = read()
-    new_data = data
-    try:
-        new_data[message] += [answer]
-    except KeyError:
-        new_data.update({message: [answer]})
-    finally:
-        write(data, new_data)
-
-def test():
-    print('test')
+    # select random response
+    position = 0
+    for tag in data:
+        if position == similarity_mesh.index(max(similarity_mesh)):
+            return random.choice(data[tag]["responses"])
+        position += 1
