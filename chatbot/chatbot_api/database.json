@@ -16,12 +16,12 @@
         "responses": ["wpisz sobie w Google, nikt mnie stolic nie nauczył", "nie stam stolic państw", "znam tylko stolice Polski i jest nią Warszawa, innych nie znam"]
     },
     "pytanie4": {
-        "patterns": ["ile masz lat", "jaki jest twój wiek", "wiek", "ile liczysz sobie wiosen"],
+        "patterns": ["ile masz lat", "jaki jest twój wiek", "wiek", "ile liczysz sobie wiosen", "jak stary jesteś", "kiedy cię stworzono", "kiedy powstałeś"],
         "responses": ["zostałem stworzony 31 marca 2021 roku, matematyke zostawiam Tobie", "ciężko mówić o wieku jako chatbot, ale zostałem stworzony 31 marca 2021 roku", "powstałem 31 marca 2021 roku"]
     },
     "pytanie5": {
         "patterns": ["pogoda", "jaka jest dzisiaj pogoda", "czy dzisiaj będzie padać deszcz", "deszcz", "śnieg", "czy będzie padał śnieg", "czy będzie deszcz", "jaka pogoda"],
-        "responses": ["nie jestem pogodynką", "jak dla mnie będzie dzisiaj słońce, ale nie znam się na pogodznie", "sprawdź w Google jaka będzie pogoda"]
+        "responses": ["nie jestem pogodynką", "jak dla mnie będzie dzisiaj słońce, ale nie znam się na pogodzie", "sprawdź w Google jaka będzie pogoda"]
     },
     "pytanie6": {
         "patterns": ["opowiesz żart", "daj jakiś żart", "dowcip", "powiedz dowcip", "znasz jakiś kawał", "kawał"],
@@ -32,7 +32,7 @@
         "responses": ["z matmy to mi zawsze było nie po drodze", "nie umiem liczyć, ale wiem kto umie Wolfram|Alpha", "wynik to sprawa ośmiorzędna"]
     },
     "pytanie8": {
-        "patterns": ["ulubiona gra", "gra komputerowa", "w co lubisz grać", "w co grasz", "cyberpunk 2077", "red dead redemption", "heroes III", "wiedźmin", "league of legends", "counter strike"],
+        "patterns": ["ulubiona gra", "gra komputerowa", "w co lubisz grać", "w co grasz", "cyberpunk 2077", "red dead redemption", "heroes III", "heroes V", "wiedźmin", "league of legends", "counter strike"],
         "responses": ["nie gram w gry", "nie znam się na grach komputerowych"]
     },
     "pytanie9": {
@@ -52,7 +52,7 @@
         "responses": ["lubię koty i psy, nie jestem po żadnej stronie w tym sporze", "kocham wszystkie zwierzęta, osobiście nie mam żadnego"]
     },
     "pytanie13": {
-        "patterns": ["pis", "polityka", "partia polityczna", "rząd", "rządzący", "500+", "janusz korwin mikke", "po", "konfederacja", "jarosław kaczyński", "korwin", "kaczyński", "sasin", "minister", "minister zdrowia"],
+        "patterns": ["pis", "polityka", "partia polityczna", "rząd", "rządzący", "500+", "janusz korwin mikke", "po", "konfederacja", "jarosław kaczyński", "korwin", "kaczyński", "sasin", "minister", "minister zdrowia", "***** ***"],
         "responses": ["nie mieszam się w politykę", "jestem po niczyjej stronie jeśli chodzi o politykę"]
     },
     "pytanie14": {
@@ -100,16 +100,16 @@
         "responses": ["przykro mi, cały czas się uczę", "każda rozmowa daje mi możliwość nauki", "staram się naj najlepiej odpowiadać na pytania"]
     },
     "pytanie25": {
-        "patterns": [":)", "<3", ":D", ":P", "^^", "^,^", ":$", ":S", ":3", ":]", ":}"],
+        "patterns": [":)", "<3", ":D", ":P", "^^", "^,^", ":$", ":S", ":3", ":]", ":}", "heart", "smiling_face", "smile", "stuck_out_tongue", "unamused"],
         "responses": [":)", "<3", ":D", ":P", "^^", "^,^", ":$", ":S", ":3", ":]", ":}"]
     },
     "pytanie26": {
-        "patterns": [":c", ":(", "D:", ":[", ":{"],
+        "patterns": [":c", ":(", "D:", ":[", ":{", "frowning"],
         "responses": [":c", ":(", "D:", ":[", ":{"]
     },
     "pytanie27": {
-        "patterns": ["to dobrze", "to super", "idealnie", "zgadzam się", "dokładnie"],
-        "responses": ["no i super", "jestem zadowolony, że cieczysz się z odpowiedzi"]
+        "patterns": ["to dobrze", "to super", "idealnie", "zgadzam się", "dokładnie", "okej", "dobrze", "a bardzo dobrze, miło że pytasz"],
+        "responses": ["no i super", "jestem zadowolony, że cieczysz się z odpowiedzi", "cieszę się z tego"]
     },
     "pytanie": {
         "patterns": [""],

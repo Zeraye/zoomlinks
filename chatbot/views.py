@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .chatbot_api import chatbot as cb
+from .chatbot_api.chatbot import Chatbot
 
 # Create your views here.
 @login_required(login_url='/rejestracja/')
@@ -16,7 +16,8 @@ def chatbot(request):
 
             message = request.POST['message-value']
             context['messages'].append(('my', message))
-            answer = cb.response(message)
+            cb = Chatbot(query=message)
+            answer = cb.response()[0]
             context['messages'].append(('bot', answer))
 
 
