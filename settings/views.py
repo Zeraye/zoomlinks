@@ -30,5 +30,6 @@ def settings(request):
         return HttpResponseRedirect(reverse('myclass:myclass'))
     else:
         form = SettingsForm()
-
-    return render(request, 'settings/settings.html', {'form': form, 'current_lesson': lessons(request, request.user.class_name)[0]})
+    import os
+    MESSENGER_LINK = os.environ.get('MESSENGER_LINK')
+    return render(request, 'settings/settings.html', {'form': form, 'current_lesson': lessons(request, request.user.class_name)[0], 'messenger_link': MESSENGER_LINK})

@@ -25,10 +25,13 @@ def myclass(request):
         lessons_today = list(map(lambda lesson, time: (lesson, time), lessons_today,
             ['brak godziny' for i in range(30)]))
 
+    import os
+    MESSENGER_LINK = os.environ.get('MESSENGER_LINK')
 
     context = {'current_lesson': lessons_all[0],
                'lessons_today': lessons_today,
                'links': lessons_all[2],
-               'today_day_name': today_day_name}
+               'today_day_name': today_day_name,
+               'messenger_link': MESSENGER_LINK}
 
     return render(request, 'myclass/myclass.html', context=context)
