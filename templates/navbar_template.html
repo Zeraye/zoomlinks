@@ -9,8 +9,8 @@
     <nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto w-100 center">
             <li class="nav-item active">
-                <a style="text-decoration: none;" href="{{messenger_link}}"><p class="name" target='_blank'><span>Co tam porabiasz {{user.username}}?</span></p></a>
-                {# <a style="text-decoration: none;" href="{% url 'chatbot:chatbot' %}"><p class="name"><span>Co tam porabiasz {{user.username}}?</span></p></a> #}
+                {# <a style="text-decoration: none;" href="{{messenger_link}}"><p class="name" target='_blank'><span>Co tam porabiasz {{user.username}}?</span></p></a> #}
+                <a style="text-decoration: none;" href="{% url 'chatbot:chatbot' %}"><p class="name"><span>Co tam porabiasz {{user.username}}?</span></p></a>
                 {# <p class="name">Cześć {{user.username}}, masz teraz {{current_lesson|lower}}</p> #}
             </li>
         </ul>
