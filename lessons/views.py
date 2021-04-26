@@ -6,7 +6,7 @@ def lessons(request, class_name):
     if request.user.class_name == 'slo3a':
         timetable = {
             'Poniedziałek': ['Fizyka - Mazi', 'Informatyka', 'Angielski', 'Angielski', 'Matematyka', 'Matematyka', 'Polski'],
-            'Wtorek': ['Fizyka - Mazi', 'W-f', 'Polski', 'Polski', 'Informatyka', 'Matematyka', 'Matematyka'],
+            'Wtorek': ['Fizyka - Mazi', 'W-f', 'Polski', 'Polski', 'Szkolenie', 'Matematyka', 'Matematyka'],
             'Środa': ['Fizyka - Radek', 'Fizyka - Radek', 'Matematyka', 'Matematyka', 'His', 'Fizyka - Mazi', 'Polski'],
             'Czwartek': ['Fizyka - Radek', 'Matematyka', 'Matematyka', 'Angielski', 'Wychowawcza', 'Informatyka', 'W-f', 'Religia'],
             'Piątek': ['W-f', 'Religia', 'Polski', 'Fizyka - Mazi', 'Matematyka', 'Angielski', 'Angielski']
@@ -25,7 +25,8 @@ def lessons(request, class_name):
             # 'Wychowawcza': 'https://us04web.zoom.us/j/2225987302?pwd=dkYyNUU0V0hoUEdZckVsVWFRZzlXQT09',
 
             'His': 'https://us04web.zoom.us/j/9276883785?pwd=dXhVZERYNDVjR1BUUHY5MWc3dW1NQT09',
-            'Miska Katarzyna': 'https://us04web.zoom.us/j/79728242859?pwd=SnFORkNPSHV4Z3NiWi9KYUU0WTRsdz09'
+            'Miska Katarzyna': 'https://us04web.zoom.us/j/79728242859?pwd=SnFORkNPSHV4Z3NiWi9KYUU0WTRsdz09',
+            'Szkolenie': 'https://us02web.zoom.us/j/3791921629?pwd=SFNmQUIvT0tRaHlDaVYrN3l5bzJVQT09'
         }
 
         if request.user.math_teacher == 'Buba':
