@@ -41,4 +41,4 @@
 }
 
 .name:hover span {display:none}
-.name:hover:before {content:"Chcesz popisać?"}
+/* .name:hover:before {content:"Chcesz popisać?"} */
