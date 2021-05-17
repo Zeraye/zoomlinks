@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
 
 urlpatterns = [
-    path('', include(('accounts.urls', 'accounts'), namespace='accounts')),
-    path('', include(('settings.urls', 'settings'), namespace='settings')),
-    path('', include(('myclass.urls', 'myclass'), namespace='myclass')),
-    path('', include(('timetable.urls', 'timetable'), namespace='timetable')),
-    path('', include(('timers.urls', 'timers'), namespace='timers')),
-    path('', include(('chatbot.urls', 'chatbot'), namespace='chatbot')),
-    path('admin/', admin.site.urls),
+    # path('', include(('accounts.urls', 'accounts'), namespace='accounts')),
+    # path('', include(('settings.urls', 'settings'), namespace='settings')),
+    # path('', include(('myclass.urls', 'myclass'), namespace='myclass')),
+    # path('', include(('timetable.urls', 'timetable'), namespace='timetable')),
+    # path('', include(('timers.urls', 'timers'), namespace='timers')),
+    # path('', include(('chatbot.urls', 'chatbot'), namespace='chatbot')),
+    # path('admin/', admin.site.urls),
+    path('', include(('temporary.urls', 'temporary'), namespace='temporary')),
 ]

@@ -7,7 +7,7 @@ from lessons.views import lessons
 def myclass(request):
     lessons_all = lessons(request, request.user.class_name)
     today_day_name = lessons_all[3]
-
+    
     try: lessons_today = list((lessons_all[1][today_day_name]))
     except:
         lessons_today = []
