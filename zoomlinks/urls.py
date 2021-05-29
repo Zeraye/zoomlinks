@@ -26,4 +26,5 @@ urlpatterns = [
     # path('', include(('chatbot.urls', 'chatbot'), namespace='chatbot')),
     # path('admin/', admin.site.urls),
     path('', include(('temporary.urls', 'temporary'), namespace='temporary')),
+    path('', include(('leagueoflegends.urls', 'leagueoflegends'), namespace='leagueoflegends')),
 ]

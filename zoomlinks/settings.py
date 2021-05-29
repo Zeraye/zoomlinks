@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'timetable',
     'timers',
     'chatbot',
-    'temporary'
+    'temporary',
+    'leagueoflegends'
 ]
 
 MIDDLEWARE = [
