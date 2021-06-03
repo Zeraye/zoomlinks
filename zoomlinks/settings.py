@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'livereload',
-    'accounts',
-    'settings',
-    'myclass',
-    'timetable',
-    'timers',
-    'chatbot',
+    # 'accounts',
+    # 'settings',
+    # 'myclass',
+    # 'timetable',
+    # 'timers',
+    # 'chatbot',
     'temporary',
     'leagueoflegends'
 ]
